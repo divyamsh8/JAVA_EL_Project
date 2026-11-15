@@ -1,0 +1,492 @@
+/**
+ * Contineo Style Parent Portal - Stylesheet
+ * Demo Institute of Engineering
+ */
+
+:root {
+  --cn-bg-left: #b3dff8;
+  --cn-bg-right: #242466;
+  --cn-term-btn: #1a759f;
+  --cn-term-btn-hover: #14597a;
+  --cn-card-border: #243142;
+  --cn-dark-text: #333333;
+  --cn-primary: #1e88e5;
+  --cn-primary-hover: #1565c0;
+  --cn-danger: #c62020;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Landing Container */
+.cn-landing {
+  display: flex;
+  flex: 1;
+  min-height: calc(100vh - 60px);
+}
+
+/* Left Section */
+.cn-bgpart1 {
+  background-color: var(--cn-bg-left);
+  flex: 3;
+  padding: 50px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 932px;
+}
+
+.cn-web-logo {
+  margin-bottom: 40px;
+}
+
+.cn-logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cn-big-logo img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.cn-heading {
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #1b2a47 !important;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+.cn-welcome {
+  max-width: 680px;
+}
+
+.cn-welcome h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1b2a47;
+  margin-bottom: 16px;
+}
+
+.cn-welcome p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #334155;
+  margin-bottom: 25px;
+}
+
+/* Notice Board */
+.cn-cal-events {
+  background-color: #ffffff;
+  border-left: 7px solid var(--cn-card-border);
+  border-radius: 6px;
+  padding: 24px 28px;
+  margin-top: 35px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.cn-cal-events h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1b2a47;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cn-cal-events ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cn-cal-events li {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #243142;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 6px 0;
+}
+
+.cn-cal-events li i {
+  color: #0284c7;
+  font-size: 18px;
+  margin-top: 2px;
+}
+
+/* Right Section */
+.cn-bgpart2 {
+  background-color: var(--cn-bg-right);
+  flex: 2;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile logo in right pane (hidden on desktop) */
+.cn-mobile-logo {
+  display: none;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.cn-mobile-logo .cn-heading {
+  color: #ffffff !important;
+  font-size: 20px;
+}
+
+/* Term Access Buttons */
+.cn-links {
+  background-color: var(--cn-term-btn);
+  border-radius: 6px;
+  width: 90%;
+  max-width: 420px;
+  margin-bottom: 15px;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.cn-links:hover {
+  background-color: var(--cn-term-btn-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+.cn-links a {
+  display: block;
+  font-weight: 700;
+  font-size: 16px;
+  color: #ffffff !important;
+  text-align: center;
+  padding: 12px 16px;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+/* Login Form Box */
+.cn-form-box {
+  background-color: #ffffff;
+  padding: 35px 30px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  margin-top: 15px;
+}
+
+.cn-form-box h3 {
+  color: #333333;
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.clr1 {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 6px;
+}
+
+.input-icon-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon-wrap i {
+  position: absolute;
+  left: 12px;
+  color: #94a3b8;
+  font-size: 16px;
+}
+
+.cn-input {
+  width: 100%;
+  padding: 10px 12px 10px 38px;
+  font-size: 15px;
+  border: 1px solid #cbd5e1;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.cn-input:focus {
+  border-color: #0284c7;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+}
+
+/* Date of Birth Selects */
+.dob-select-group {
+  display: flex;
+  gap: 8px;
+}
+
+.cn-select {
+  flex: 1;
+  padding: 9px 8px;
+  font-size: 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #334155;
+  outline: none;
+  cursor: pointer;
+}
+
+.cn-select:focus {
+  border-color: #0284c7;
+}
+
+/* Form Action Buttons */
+.form-action-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 25px;
+  gap: 15px;
+}
+
+.cn-forgot-link {
+  color: #475569;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.cn-forgot-link:hover {
+  color: #0284c7;
+  text-decoration: underline;
+}
+
+.cn-login-btn {
+  background-color: #1e88e5;
+  color: #ffffff;
+  border: none;
+  padding: 10px 24px;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.cn-login-btn:hover {
+  background-color: #1565c0;
+}
+
+.cn-login-btn:active {
+  transform: scale(0.98);
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1050;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(2px);
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 25px 30px;
+  border: 1px solid #94a3b8;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 480px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  position: relative;
+  animation: slideDown 0.25s ease-out;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-content h3 {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--cn-danger) !important;
+}
+
+.modal-content p {
+  text-align: center;
+  font-size: 16px;
+  color: #334155;
+  margin-bottom: 12px;
+}
+
+.attempts-badge {
+  text-align: center;
+  color: #dc2626;
+  font-size: 17px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.close {
+  color: #64748b;
+  position: absolute;
+  right: 18px;
+  top: 14px;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close:hover,
+.close:focus {
+  color: #0f172a;
+}
+
+/* Footer */
+footer {
+  background-color: #1e293b;
+  color: #cbd5e1;
+  padding: 14px 30px;
+  font-size: 13px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.cn-footer-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.cn-footer-text a {
+  color: #93c5fd;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.cn-footer-text a:hover {
+  text-decoration: underline;
+}
+
+.demo-badge {
+  background-color: #f59e0b;
+  color: #000;
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Responsive Rules for Mobile (max-width: 768px, specifically 390px iPhone viewport) */
+@media (max-width: 768px) {
+  .cn-landing {
+    flex-direction: column-reverse;
+  }
+
+  .cn-bgpart1 {
+    min-height: auto;
+    padding: 30px 20px;
+  }
+
+  .cn-bgpart2 {
+    padding: 30px 16px;
+  }
+
+  .cn-web-logo {
+    display: none;
+  }
+
+  .cn-mobile-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .cn-mobile-logo img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .cn-mobile-logo .cn-heading {
+    color: #ffffff !important;
+    font-size: 18px;
+  }
+
+  .cn-form-box {
+    width: 100%;
+    max-width: 360px;
+    padding: 25px 20px;
+  }
+
+  .cn-links {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .cn-links a {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .dob-select-group {
+    flex-direction: row;
+  }
+
+  .cn-footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+}

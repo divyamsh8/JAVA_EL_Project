@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="130" height="130">
+  <defs>
+    <linearGradient id="crestGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37" />
+      <stop offset="50%" stop-color="#FFD700" />
+      <stop offset="100%" stop-color="#AA771C" />
+    </linearGradient>
+    <linearGradient id="crestBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1b2a47" />
+      <stop offset="100%" stop-color="#0a1426" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Ring -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="url(#crestGold)" stroke-width="4" />
+  <circle cx="100" cy="100" r="90" fill="#ffffff" stroke="#1b2a47" stroke-width="1.5" />
+
+  <!-- Shield -->
+  <path d="M 60 45 L 140 45 C 140 45 142 95 100 135 C 58 95 60 45 60 45 Z" 
+        fill="url(#crestBlue)" stroke="url(#crestGold)" stroke-width="3" />
+
+  <!-- Open Book inside shield -->
+  <path d="M 78 80 C 88 77 96 80 100 83 C 104 77 112 77 122 80 L 122 105 C 112 102 104 102 100 107 C 96 102 88 102 78 105 Z" 
+        fill="#ffffff" stroke="url(#crestGold)" stroke-width="1.5" />
+  <line x1="100" y1="83" x2="100" y2="107" stroke="#1b2a47" stroke-width="1.5" />
+
+  <!-- Torch / Flame above book -->
+  <path d="M 100 55 C 95 63 93 68 97 74 C 99 70 101 70 103 74 C 107 68 105 63 100 55 Z" fill="#E65100" />
+  <path d="M 100 58 C 97 64 96 67 98 71 C 99 69 101 69 102 71 C 104 67 103 64 100 58 Z" fill="#FFB300" />
+
+  <!-- Three stars -->
+  <polygon points="100,113 102,118 107,118 103,121 105,126 100,123 95,126 97,121 93,118 98,118" fill="url(#crestGold)" />
+
+  <!-- Laurel Leaves (Left) -->
+  <path d="M 46 80 C 44 95 50 115 65 130" fill="none" stroke="url(#crestGold)" stroke-width="3" stroke-linecap="round" />
+  <ellipse cx="46" cy="75" rx="4" ry="7" transform="rotate(-30 46 75)" fill="url(#crestGold)" />
+  <ellipse cx="43" cy="90" rx="4" ry="7" transform="rotate(-15 43 90)" fill="url(#crestGold)" />
+  <ellipse cx="47" cy="106" rx="4" ry="7" transform="rotate(15 47 106)" fill="url(#crestGold)" />
+  <ellipse cx="55" cy="120" rx="4" ry="7" transform="rotate(35 55 120)" fill="url(#crestGold)" />
+
+  <!-- Laurel Leaves (Right) -->
+  <path d="M 154 80 C 156 95 150 115 135 130" fill="none" stroke="url(#crestGold)" stroke-width="3" stroke-linecap="round" />
+  <ellipse cx="154" cy="75" rx="4" ry="7" transform="rotate(30 154 75)" fill="url(#crestGold)" />
+  <ellipse cx="157" cy="90" rx="4" ry="7" transform="rotate(15 157 90)" fill="url(#crestGold)" />
+  <ellipse cx="153" cy="106" rx="4" ry="7" transform="rotate(-15 153 106)" fill="url(#crestGold)" />
+  <ellipse cx="145" cy="120" rx="4" ry="7" transform="rotate(-35 145 120)" fill="url(#crestGold)" />
+
+  <!-- Lower Ribbon -->
+  <path d="M 40 145 Q 100 170 160 145 L 155 158 Q 100 183 45 158 Z" fill="#1b2a47" stroke="url(#crestGold)" stroke-width="1.5" />
+  <text x="100" y="157" font-family="'Times New Roman', serif" font-size="9" font-weight="bold" fill="#FFD700" text-anchor="middle" letter-spacing="1">VERITAS ET EXCELLENTIA</text>
+
+  <!-- Upper Arch text -->
+  <path id="textPathTop" d="M 25 100 A 75 75 0 0 1 175 100" fill="none" />
+  <text font-family="'Segoe UI', Roboto, Arial, sans-serif" font-size="9" font-weight="700" fill="#1b2a47" letter-spacing="1.5">
+    <textPath href="#textPathTop" startOffset="50%" text-anchor="middle">
+      DEMO INSTITUTE OF ENGINEERING
+    </textPath>
+  </text>
+  
+  <!-- Founded Year -->
+  <text x="100" y="32" font-family="'Times New Roman', serif" font-size="8" font-weight="bold" fill="#AA771C" text-anchor="middle">ESTD 1946</text>
+</svg>

@@ -1,0 +1,11 @@
+package com.demo.parentportal;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class ParentPortalApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(ParentPortalApplication.class, args);
+    }
+}
