@@ -235,11 +235,21 @@ public class ParentPortalController {
     public ResponseEntity<ApiResponse<Payment>> payFees(
             Authentication authentication,
             @RequestParam(required = false) Long studentId,
-            @RequestParam Long feeId,
-            @RequestParam BigDecimal amount,
-            @RequestParam(defaultValue = "ONLINE_SANDBOX") String mode) {
-        Long targetId = resolveAuthorizedStudentId(authentication, studentId);
-        Payment payment = parentPortalService.processSandboxPayment(targetId, feeId, amount, mode);
+            @RequestParam(required = false) Long feeId,
+            @RequestParam(required = false) BigDecimal amount,
+            @RequestParam(required = false, defaultValue = "ONLINE_SANDBOX") String mode,
+            @RequestBody(required = false) PaymentRequest body) {
+        Long finalStudentId = (studentId != null) ? studentId : (body != null ? body.getStudentId() : null);
+        Long finalFeeId = (feeId != null) ? feeId : (body != null ? body.getFeeId() : null);
+        BigDecimal finalAmount = (amount != null) ? amount : (body != null ? body.getAmount() : null);
+        String finalMode = (mode != null && !mode.equals("ONLINE_SANDBOX")) ? mode : (body != null && body.getMode() != null ? body.getMode() : "ONLINE_SANDBOX");
+
+        if (finalFeeId == null || finalAmount == null) {
+            throw new IllegalArgumentException("feeId and amount are required for fee settlement");
+        }
+
+        Long targetId = resolveAuthorizedStudentId(authentication, finalStudentId);
+        Payment payment = parentPortalService.processSandboxPayment(targetId, finalFeeId, finalAmount, finalMode);
         return ResponseEntity.ok(ApiResponse.ok("Payment processed successfully", payment));
     }
 

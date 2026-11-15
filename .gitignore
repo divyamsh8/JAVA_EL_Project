@@ -20,6 +20,8 @@ yarn-error.log*
 data/
 backend/data/
 *.log
+_backup/
+_quarantine/
 
 # OS & IDE
 .DS_Store
